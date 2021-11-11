@@ -18,4 +18,10 @@ class ViewController extends Controller
         //code load data yang dimuat di form
         return view('htb_cont');
     }
+
+    function formets()
+    {
+        //code load data yang dimuat di form
+        return view('ets');
+    }
 }

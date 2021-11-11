@@ -20,8 +20,14 @@ Route::get('prak2', function () {
     //tidak banyak proses atau persiapan load form
     return view('praktikum2');
 });
+Route::get('tgs4', function () {
+    //tidak banyak proses atau persiapan load form
+    return view('tugas4');
+});
 
 //jika butuh load banyak proses
-Route::get('isitugas4',"ViewController@showForm");
-Route::get('tugas4',"ViewController@resultForm");
+Route::get('isitugasphp',"ViewController@showForm");
+Route::get('tugasphp',"ViewController@resultForm");
+
+Route::get('ets',"ViewController@formets");
 
