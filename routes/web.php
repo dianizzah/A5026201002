@@ -39,3 +39,10 @@ Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 
+//route CRUD 25/11
+Route::get('/mutasi','MutasiController@index');
+Route::get('/mutasi/tambah','MutasiController@tambah');
+Route::post('/mutasi/store','MutasiController@store');
+Route::get('/mutasi/edit/{id}','MutasiController@edit');
+Route::post('/mutasi/update','MutasiController@update');
+Route::get('/mutasi/hapus/{id}','MutasiController@hapus');
