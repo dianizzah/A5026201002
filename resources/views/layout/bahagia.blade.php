@@ -150,7 +150,7 @@
     <div class="header" id="myHeader">
         <span style="font-size:25px;cursor:pointer; color: rgb(255, 255, 255)" onclick="openNav()">&#9776;</span>
 
-        <img src="public/images/fotoprofil.jpg" style="width:75px; height:75px; margin: 5px">
+        <img src="/images/fotoprofil.jpg" style="width:75px; height:75px; margin: 5px">
 
         <b>Dian Nizzah Fortuna 5026201002</b>
     </div>
