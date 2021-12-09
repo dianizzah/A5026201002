@@ -1,13 +1,13 @@
-@extends('layout.bahagia')
 
-   @section('title', 'Data Mutasi')
-   @section('judulhalaman', 'Tambah Data Mutasi')
+   @extends('layout.bahagia')
 
-   @section('sidebar')
+   @section('title', 'Data Absen')
+   @section('judulhalaman', 'Tambah Data Absen')
 
-@section('konten')
-	<form action="/mutasi/store" method="post">
-		{{ csrf_field() }}
+   @section('konten')
+
+    <form action="/absen/store" method="post">
+        {{ csrf_field() }}
 
         <label for="IDPegawai" class="col-sm-2 control-label">IDPegawai</label>
         <select name="idpegawai" class="form-control">
@@ -16,22 +16,16 @@
             @endforeach
         </select>
 
-		<label for="Departemen" class="col-sm-2 control-label">Departemen</label>
-        <input type="text" name="depart" required="required" class="form-control">
-        <br/>
-
-        <label for="Departemen" class="col-sm-2 control-label">Sub Departemen</label>
-        <input type="text" name="subdepart" required="required" class="form-control"> <br/>
-
         <div class="form-group">
-            <label for="dtpickerdemo" class="col-sm-2 control-label">Tanggal Mulai Bertugas</label>
+            <label for="dtpickerdemo" class="col-sm-2 control-label">Tanggal :</label>
             <div class='form-control input-group date ' id='dtpickerdemo'>
-                <input type='text' class="form-control" name="waktutgs" required="required" />
+                <input type='text' class="form-control" name="tanggal" required="required" />
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar"></span>
                 </span>
             </div>
         </div>
+
         <script type="text/javascript">
             $(function() {
                 $('#dtpickerdemo').datetimepicker({
@@ -43,9 +37,20 @@
             });
         </script>
 
+        <label for="Status" class="col-sm-2 control-label">Status</label>
+        <br/>
+        <div class="radio form" style="text-align: left">
+        <input type="radio" id="izin" name="status" value="I">
+        <label for="html">Izin</label><br>
+        <input type="radio" id="sakit" name="status" value="S" checked="checked">
+        <label for="css">Sakit</label><br>
+        <input type="radio" id="alpha" name="status" value="A">
+        <label for="javascript">Alpha</label>
+        </div>
+
         <ul class="pager">
-            <li><a href="/mutasi">Kembali</a></li>
+            <li><a href="/absen">Kembali</a></li>
             <li><button type="submit" value="Submit">Simpan Data</button></li>
         </ul>
-	</form>
+    </form>
 @endsection

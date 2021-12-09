@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Penugasan Laravel CRUD</title>
-</head>
-<body>
+@extends('layout.bahagia')
 
-	<h3>Data Mutasi Pegawai</h3>
+   @section('title', 'Data Mutasi')
+   @section('judulhalaman', 'Daftar Mutasi')
 
-	<a href="/mutasi/tambah"> + Tambah Mutasi Baru</a>
+   @section('sidebar')
+
+@section('konten')
+
+	<button> <a href="/mutasi/tambah"> + Tambah Mutasi Baru</a> </button>
 
 	<br/>
 	<br/>
-
-	<table border="1">
+    <div class="table-responsive">
+    <table border="1" class="table table-hover" style="border-color: black">
 		<tr>
-			<th>ID</th>
 			<th>ID Pegawai</th>
 			<th>Departemen</th>
 			<th>Sub Departemen</th>
@@ -23,20 +22,18 @@
 		</tr>
 		@foreach($mutasi as $m)
 		<tr>
-            <td>{{ $m->ID }}</td>
-			<td>{{ $m->pegawai_id }}</td>
-			<td>{{ $m->pegawai_depart }}</td>
-			<td>{{ $m->pegawai_subdepart }}</td>
-			<td>{{ $m->pegawai_tgl }}</td>
+			<td>{{ $m->IDPegawai }}</td>
+			<td>{{ $m->Departemen }}</td>
+			<td>{{ $m->SubDepartemen }}</td>
+			<td>{{ $m->MulaiBertugas }}</td>
 			<td>
-				<a href="/mutasi/edit/{{ $m->ID }}">Edit</a>
+				<a href="/mutasi/edit/{{ $m->ID }}"><span class="glyphicon glyphicon-edit"></span></a>
 				|
-				<a href="/mutasi/hapus/{{ $m->ID }}">Hapus</a>
+				<a href="/mutasi/hapus/{{ $m->ID }}"><span class="glyphicon glyphicon-trash"></span></a>
 			</td>
 		</tr>
 		@endforeach
 	</table>
 
+@endsection
 
-</body>
-</html>

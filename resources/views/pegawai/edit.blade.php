@@ -1,30 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('layout.bahagia')
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Edit Pegawai</h3>
+   @section('title', 'Data Pegawai')
+   @section('judulhalaman', 'Edit Data Pegawai')
 
-	<a href="/pegawai"> Kembali</a>
+   @section('sidebar')
 
-	<br/>
-	<br/>
-
+@section('konten')
 	@foreach($pegawai as $p)
 	<form action="/pegawai/update" method="post">
 		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
-		Nama <input type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}"> <br/>
-		Jabatan <input type="text" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}"> <br/>
-		Umur <input type="number" required="required" name="umur" value="{{ $p->pegawai_umur }}"> <br/>
-		Alamat <textarea required="required" name="alamat">{{ $p->pegawai_alamat }}</textarea> <br/>
-		<input type="submit" value="Simpan Data">
+		<input type="hidden" name="id" value="{{ $p->pegawai_id }}">
+        <br/>
+		<label for="IDPegawai" class="col-sm-2 control-label">IDPegawai</label>
+        <input type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}" class="form-control"> <br/>
+
+        <label for="Jabatan" class="col-sm-2 control-label">Jabatan</label>
+        <input type="text" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}" class="form-control"> <br/>
+
+        <label for="Umut" class="col-sm-2 control-label">Umur</label>
+        <input type="number" required="required" name="umur" value="{{ $p->pegawai_umur }}" class="form-control"> <br/>
+
+        <label for="Alamat" class="col-sm-2 control-label">Alamat</label>
+        <textarea required="required" name="alamat" class="form-control">{{ $p->pegawai_alamat }}</textarea> <br/>
+
+        <ul class="pager">
+            <li><a href="/pegawai">Kembali</a></li>
+            <li><button type="submit" value="Submit">Simpan Data</button></li>
+        </ul>
 	</form>
 	@endforeach
 
-
-</body>
-</html>
+@endsection

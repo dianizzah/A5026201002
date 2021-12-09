@@ -46,3 +46,11 @@ Route::post('/mutasi/store','MutasiController@store');
 Route::get('/mutasi/edit/{id}','MutasiController@edit');
 Route::post('/mutasi/update','MutasiController@update');
 Route::get('/mutasi/hapus/{id}','MutasiController@hapus');
+
+//route CRUD absen
+Route::get('/absen','AbsenController@indexabsen');
+Route::get('/absen/add','AbsenController@add');
+Route::post('/absen/store','AbsenController@store');
+Route::get('/absen/edit/{id}','AbsenController@edit');
+Route::post('/absen/update','AbsenController@update');
+Route::get('/absen/hapus/{id}','AbsenController@hapus');
