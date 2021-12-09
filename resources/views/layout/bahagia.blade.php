@@ -86,6 +86,10 @@
         .sidenav a {font-size: 18px;}
         }
 
+        th {
+            text-align: center;
+        }
+
         .footer {
         position: fixed;
         left: 0;
