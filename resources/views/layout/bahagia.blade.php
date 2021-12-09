@@ -86,8 +86,18 @@
         .sidenav a {font-size: 18px;}
         }
 
-        th {
-            text-align: center;
+        .header {
+        padding: 10px 16px;
+        background: #7575B1;
+        color: #f1f1f1;
+        display:inline-block;
+        width: 100%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding:10px;
         }
 
         .footer {
@@ -101,11 +111,11 @@
         font-weight: bolder;
         text-align: center;
         }
-
     </style>
 </head>
 
 <body>
+
     @section('sidebar')
     <div id="mySidenav" class="sidenav">
         <h2 class="w3-bar-item" style="color:#fafafa; text-align:center; font-weight:bolder">Menu</h2>
@@ -135,7 +145,31 @@
     @show
 
     <div id="main">
-        <span style="font-size:25px;cursor:pointer; color: black" onclick="openNav()">&#9776;</span>
+
+
+    <div class="header" id="myHeader">
+        <span style="font-size:25px;cursor:pointer; color: rgb(255, 255, 255)" onclick="openNav()">&#9776;</span>
+
+        <img src="public/images/fotoprofil.jpg" style="width:75px; height:75px; margin: 5px">
+
+        <b>Dian Nizzah Fortuna 5026201002</b>
+    </div>
+
+      <script>
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+    </script>
+
 
         <h1 style="text-align: center; color: black">@yield('judulhalaman')</h1>
 
@@ -144,6 +178,7 @@
 
         @show
         </div>
+
       </div>
 
     <div class="footer">
