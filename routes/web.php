@@ -48,6 +48,7 @@ Route::post('/mutasi/store','MutasiController@store');
 Route::get('/mutasi/edit/{id}','MutasiController@edit');
 Route::post('/mutasi/update','MutasiController@update');
 Route::get('/mutasi/hapus/{id}','MutasiController@hapus');
+Route::get('/mutasi/cari','MutasiController@cari');
 
 //route CRUD absen
 Route::get('/absen','AbsenController@indexabsen');
@@ -56,3 +57,14 @@ Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
+Route::get('/absen/cari','AbsenController@cari');
+
+//route CRUD kursi
+Route::get('/kursi','KursiController@index');
+Route::get('/kursi/add','KursiController@add');
+Route::post('/kursi/store','KursiController@store');
+Route::get('/kursi/edit/{kode}','KursiController@edit');
+Route::post('/kursi/update','KursiController@update');
+Route::get('/kursi/hapus/{kode}','KursiController@delete');
+Route::get('/kursi/search','KursiController@search');
+Route::get('/kursi/view/{kode}','KursiController@detail');

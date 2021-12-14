@@ -124,8 +124,7 @@
         <a href="http://127.0.0.1:8000/pegawai" class="w3-bar-item w3-button">Pegawai</a>
         <a href="http://127.0.0.1:8000/absen" class="w3-bar-item w3-button">Absen</a>
         <a href="http://127.0.0.1:8000/mutasi" class="w3-bar-item w3-button">Mutasi</a>
-        <a href="#" class="w3-bar-item w3-button">Minggu Depan</a>
-        <a href="#" class="w3-bar-item w3-button">Praktikum</a>
+        <a href="http://127.0.0.1:8000/kursi" class="w3-bar-item w3-button">Kursi</a>
 
 
         <script>

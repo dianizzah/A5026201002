@@ -17,7 +17,6 @@ class AbsenController extends Controller
        ->select('absen.*', 'pegawai.pegawai_nama')
        ->paginate(5) ;
 
-
         // mengirim data absen ke view indexabsen
         return view('absen.indexabsen', ['absen' => $absen]);
     }
@@ -78,4 +77,20 @@ class AbsenController extends Controller
         // alihkan halaman ke halaman absen
         return redirect('/absen');
     }
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+    		// mengambil data dari table absen sesuai pencarian data
+		$absen = DB::table('absen')
+        ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('absen.*', 'pegawai.pegawai_nama')
+		->where('Tanggal','like', "%" . $cari . "%")
+		->orWhere('pegawai_nama','like',"%".$cari."%")
+        ->paginate();
+
+    		// mengirim data absen ke view index
+		return view('absen.indexabsen',['absen' => $absen]);
+	}
 }

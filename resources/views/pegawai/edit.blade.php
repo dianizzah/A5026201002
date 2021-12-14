@@ -11,7 +11,7 @@
 		{{ csrf_field() }}
 		<input type="hidden" name="id" value="{{ $p->pegawai_id }}">
         <br/>
-		<label for="IDPegawai" class="col-sm-2 control-label">IDPegawai</label>
+		<label for="IDPegawai" class="col-sm-2 control-label">Nama Pegawai</label>
         <input type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}" class="form-control"> <br/>
 
         <label for="Jabatan" class="col-sm-2 control-label">Jabatan</label>

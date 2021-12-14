@@ -41,11 +41,11 @@
         <br/>
         <div class="radio form" style="text-align: left">
         <input type="radio" id="izin" name="status" value="I">
-        <label for="html">Izin</label><br>
+        <label for="izin">Izin</label><br>
         <input type="radio" id="sakit" name="status" value="S" checked="checked">
-        <label for="css">Sakit</label><br>
+        <label for="sakit">Sakit</label><br>
         <input type="radio" id="alpha" name="status" value="A">
-        <label for="javascript">Alpha</label>
+        <label for="alpha">Alpha</label>
         </div>
 
         <ul class="pager">

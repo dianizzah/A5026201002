@@ -10,7 +10,7 @@
 
     <table border="1" class="table table-hover" style="border-color: black">
         <tr>
-		<th>IDPegawai</th>
+		<th>Nama Pegawai</th>
         <th>Jabatan</th>
         <th>Umur</th>
         <th>Alamat</th>
