@@ -15,7 +15,7 @@ class MutasiController extends Controller
         $mutasi = DB::table('mutasi')
         ->join('pegawai', 'mutasi.IDPegawai', '=', 'pegawai.pegawai_id')
         ->select('mutasi.*', 'pegawai.pegawai_nama')
-        ->paginate(5) ;
+        ->orderBy('MulaiBertugas', 'desc')->paginate(5) ;
 
     	// mengirim data mutasi ke view index
     	return view('mutasi.index',['mutasi' => $mutasi]);

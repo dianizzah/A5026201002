@@ -11,7 +11,7 @@ class KursiController extends Controller
     public function index()
     {
 
-        $kursi = DB::table('kursi')->paginate(5); //hasil get() adalah Array of Object [object]
+        $kursi = DB::table('kursi')->orderBy('merkkursi', 'asc')->paginate(5) ;; //hasil get() adalah Array of Object [object]
     	// mengirim data kursi ke view index
     	return view('kursi.indexkursi',['kursi' => $kursi]); //teknik komunikasi/passing value antara controller dan view
 

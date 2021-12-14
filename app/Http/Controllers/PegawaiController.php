@@ -14,7 +14,7 @@ class PegawaiController extends Controller
     	// mengambil data dari table pegawai
     	//$pegawai = DB::table('pegawai')->get(); //hasil get() adalah Array of Object [object]
 
-        $pegawai = DB::table('pegawai')->paginate(5); //hasil get() adalah Array of Object [object]
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->paginate(10); //hasil get() adalah Array of Object [object]
     	// mengirim data pegawai ke view index
     	return view('pegawai.index',['pegawai' => $pegawai]); //teknik komunikasi/passing value antara controller dan view
 
