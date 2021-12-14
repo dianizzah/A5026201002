@@ -26,16 +26,22 @@
 		<tr>
 
 			<th>Merk Kursi</th>
-			<th>Stock Kursi</th>
-			<th>Status</th>
+			{{-- <th>Stock Kursi</th> --}}
+			<th>Ketersediaan</th>
 			<th>Opsi</th>
 		</tr>
 		@foreach($kursi as $k)
 		<tr>
 
 			<td>{{ $k->merkkursi }}</td>
-			<td>{{ $k->stockkursi }}</td>
-			<td>{{ $k->tersedia }}</td>
+			{{-- <td>{{ $k->stockkursi }}</td> --}}
+			<td>
+            @if (($k->tersedia) == "T")
+            <span class="glyphicon glyphicon-remove"></span>
+            @elseif (($k->tersedia) == "A")
+            <span class="glyphicon glyphicon-ok"></span>
+            @endif
+            </td>
 			<td>
                 <a href="/kursi/view/{{ $k->kodekursi }}"><span class="glyphicon glyphicon-info-sign"></span></a>
 				|
@@ -48,4 +54,9 @@
 	</table>
     {{$kursi->Links()}}
     </div>
+    <p style="text-align: left">
+        Keterangan Ketersediaan: <br>
+        <span class="glyphicon glyphicon-ok"></span> : Ada <br>
+        <span class="glyphicon glyphicon-remove"></span> : Tidak Ada<br>
+    </p>
 @endsection

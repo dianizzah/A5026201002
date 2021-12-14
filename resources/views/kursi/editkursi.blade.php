@@ -17,8 +17,13 @@
         <label for="stock" class="col-sm-2 control-label">Stock Kursi</label>
         <input type="number" required="required" name="stock" value="{{ $k->stockkursi }}" class="form-control"> <br/>
 
-        <label for="tersedia" class="col-sm-2 control-label">Tersedia</label>
-        <input type="text" required="required" name="tersedia" value="{{ $k->tersedia }}" class="form-control"> <br/>
+        <label for="tersedia" class="col-sm-2 control-label">Ketersediaan</label> <br/>
+        <div class="radio form" style="text-align: left">
+            <input type="radio" id="izin" name="tersedia" value="A">
+            <label for="tersedia">Ada</label><br>
+            <input type="radio" id="sakit" name="tersedia" value="T" checked="checked">
+            <label for="tidakTersedia">Tidak Ada</label><br>
+        </div>
 
         <ul class="pager">
             <li><a href="/kursi">Kembali</a></li>

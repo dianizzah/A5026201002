@@ -50,6 +50,4 @@
         A : Alpha <br>
     </p>
 
-</body>
-</html>
 @endsection

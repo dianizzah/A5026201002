@@ -42,6 +42,10 @@
         margin:20px;
         }
 
+        th{
+            text-align: center;
+        }
+
         .sidenav {
         height: 100%;
         width: 0;

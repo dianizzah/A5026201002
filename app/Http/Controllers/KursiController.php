@@ -77,6 +77,7 @@ class KursiController extends Controller
 		$kursi = DB::table('kursi')
 		->where('merkkursi','like',"%".$search."%")
         ->orWhere('kodekursi','like', "%" . $search . "%")
+        ->orWhere('stockkursi','like', "%" . $search . "%")
 		->paginate(5);
 
     		// mengirim data kursi ke view index

@@ -14,7 +14,7 @@
         <label for="stock" class="col-sm-2 control-label">Stock Kursi</label>
         <input type="number" name="stock" required="required" class="form-control">
         <br/>
-        <label for="tersedia" class="col-sm-2 control-label">Tersedia</label>
+        <label for="tersedia" class="col-sm-2 control-label">Ketersediaan</label>
         <br/>
         <div class="radio form" style="text-align: left">
         <input type="radio" id="izin" name="tersedia" value="A">
