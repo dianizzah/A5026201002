@@ -68,3 +68,13 @@ Route::post('/kursi/update','KursiController@update');
 Route::get('/kursi/hapus/{kode}','KursiController@delete');
 Route::get('/kursi/search','KursiController@search');
 Route::get('/kursi/view/{kode}','KursiController@detail');
+
+//route CRUD kursi
+Route::get('/nilaikuliah','nilaikuliahController@index');
+Route::get('/nilaikuliah/add','nilaikuliahController@add');
+Route::post('/nilaikuliah/store','nilaikuliahController@store');
+Route::get('/nilaikuliah/edit/{ID}','nilaikuliahController@edit');
+Route::post('/nilaikuliah/update','nilaikuliahController@update');
+Route::get('/nilaikuliah/hapus/{ID}','nilaikuliahController@delete');
+Route::get('/nilaikuliah/search','nilaikuliahController@search');
+Route::get('/nilaikuliah/view/{ID}','nilaikuliahController@detail');
